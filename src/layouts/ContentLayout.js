@@ -35,6 +35,7 @@ const ContentLayout = (props) => {
     menuData.forEach(getRedirect);
     return redirectData;
   }, [menuData]);
+  // 第一个页面地址
   const getBaseRedirect = () => {
     // According to the url parameter to redirect
     // 这里是重定向的,重定向到 url 的 redirect 参数所示地址

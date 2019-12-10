@@ -7,6 +7,18 @@ const routerConfig = [
   {
     path: "/dashboard/analysis",
     component: loadable(() => import('../pages/Dashboard/Analysis/'))
+  },
+  {
+    path: "/list/table-list",
+    component: loadable(() => import('../pages/List/TableList'))
+  },
+  {
+    path: "/list/basic-list",
+    component: loadable(() => import('../pages/List/BasicList'))
+  },
+  {
+    path: "/list/search/articles",
+    component: loadable(() => import('../pages/List/Search/Articles'))
   }
 ];
 // 查找菜单key

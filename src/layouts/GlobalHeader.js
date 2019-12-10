@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Icon } from 'antd';
-
+import style from "./index.module.less"
 const { Header } = Layout;
 
 /**
@@ -12,9 +12,9 @@ const GlobalHeader = React.memo((props) => {
   return (
     <Header style={{ background: '#fff', padding: 0 }}>
       <Icon
-        className="trigger"
+        className={style["trigger"]}
         type={collapsed ? 'menu-unfold' : 'menu-fold'}
-        onClick={toggle}
+        onClick={e => toggle(!collapsed)}
       />
     </Header>
   )

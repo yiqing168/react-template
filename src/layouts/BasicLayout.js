@@ -17,9 +17,9 @@ const BasicLayout = (props) => {
 
   return (
     <Layout className={style["layout"]}>
-      <SiderMenu menuData={menuData} toggle={setcollapsed} Authorized={Authorized} location={location} />
+      <SiderMenu menuData={menuData} collapsed={collapsed} Authorized={Authorized} location={location} />
       <Layout>
-        <GlobalHeader collapsed={collapsed} />
+        <GlobalHeader collapsed={collapsed} toggle={setcollapsed} />
         <ContentLayout />
       </Layout>
     </Layout>
