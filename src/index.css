@@ -14,3 +14,9 @@ code {
 #root{
   min-height: 100vh;
 }
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}

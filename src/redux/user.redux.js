@@ -4,11 +4,15 @@ import { setAuthority } from "@/utils/authority"
 import { getRouterData } from "../comm/router"
 import { setRouterData } from "./menu.redux"
 
-// 从列表点击设置规则对象
+// 获取用户数据
 const GET_USER_INFO = "@USER/GET_USER_INFO";
+// 登出
+const LOGOUT = "@USER/LOGOUT";
 
-// 设置库数据
+// 设置数据
 export const userInfoAction = createAction(GET_USER_INFO);
+// 登出
+export const setLogout = createAction(LOGOUT);
 
 // 获取用户信息
 export function getUser() {
@@ -34,6 +38,9 @@ let defaultState = getInitState();
 
 export default handleActions({
   [GET_USER_INFO]: (state, data) => {
+    return Object.assign({}, state, { userInfo: data.payload });
+  },
+  [LOGOUT]: (state, data) => {
     return Object.assign({}, state, { userInfo: data.payload });
   }
 }, defaultState);
